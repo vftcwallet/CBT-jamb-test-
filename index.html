@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google-adsense-account" content="ca-pub-7661691847063643">
+  <title>CBT Test App</title>
+  <link rel="stylesheet" href="style.css">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7661691847063643" crossorigin="anonymous"></script>
+
+  <style>
+
+    .card2 { background:white; color:black; display:flex; justify-content:center; align-items:center; padding:12px 20px; margin:10px auto; border-radius:10px; box-shadow:0 4px 8px rgba(0,0,0,0.05); cursor:pointer; transition:0.3s; }
+    .card2:hover { background:#4CAF50; color:white; }
+    .modal { display:none; position:fixed; z-index:1000; left:0; top:0; width:100%; height:100%; overflow:auto; background-color: rgba(0,0,0,0.5); justify-content:center; align-items:center; }
+    .modal-content { background-color:white; margin:auto; padding:20px; border-radius:12px; max-width:90%; text-align:center; box-shadow:0 4px 12px rgba(0,0,0,0.15); }
+    .review-question { background:white; padding:12px; margin:10px 0; border-radius:10px; box-shadow:0 3px 6px rgba(0,0,0,0.05); }
+    .review-answer.correct { color:green; }
+    .review-answer.wrong { color:red; }
+  </style>
+</head>
+
+<body>
+
+  <!-- START SCREEN -->
+  <div id="startScreen">
+    <script>
+  atOptions = {
+    'key': 'fd6479b96db263c68c986b90084dfe17',
+    'format': 'iframe',
+    'height': 90,
+    'width': 728,
+    'params': {}
+  };
+</script>
+<script src="https://www.highperformanceformat.com/fd6479b96db263c68c986b90084dfe17/invoke.js"></script>
+    <h1>CBT TEST PRACTICE</h1>
+    <input type="text" id="studentName" placeholder="Enter your name" required>
+    <select id="subjectSelect">
+      <option value="">Select Subject</option>
+      <option value="ict">ICT</option>
+      <option value="mth">Mathematics</option>
+      <option value="phy">Physics</option>
+      <option value="chm">Chemistry</option>
+    </select>
+    <button onclick="startExam()">Start Test</button>
+  </div>
+
+  <!-- EXAM SCREEN -->
+  <div id="examScreen" style="display:none;">
+    <div class="top-bar">
+      <h3 id="timer">Time: 02:00</h3>
+    </div>
+
+    <div id="questionPalette"></div>
+    <div id="questionContainer"></div>
+
+    <!-- AD (hidden by default, will show after submit) -->
+    <div id="examAd" style="width:100%; text-align:center; margin:10px 0; display:none;">
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-7661691847063643"
+           data-ad-slot="1927357274"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+    </div>
+
+    <div class="buttons">
+      <button onclick="previousQuestion()">Previous</button>
+      <button onclick="nextQuestion()">Next</button>
+      <button onclick="submitExam()">Submit</button>
+    </div>
+  </div>
+
+  <!-- RESULT POPUP -->
+  <div id="resultModal" class="modal">
+    <div class="modal-content">
+      <script>
+  atOptions = {
+    'key': 'fd6479b96db263c68c986b90084dfe17',
+    'format': 'iframe',
+    'height': 90,
+    'width': 728,
+    'params': {}
+  };
+</script>
+<script src="https://www.highperformanceformat.com/fd6479b96db263c68c986b90084dfe17/invoke.js"></script>
+      <h2>Exam Completed</h2>
+      <div id="score"></div>
+    </div>
+  </div>
+
+  <!-- REVIEW SCREEN -->
+  <div id="reviewScreen" style="display:none; padding:20px;">
+    <h2>Review Your Answers</h2>
+    <div id="reviewContainer"></div>
+    <button class="card2" onclick="restartExam()">Try Again</button>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer-fixed">
+    <div class="footer-links">
+      <a href="privacy.html" target="_blank">Privacy Policy</a> |
+      <a href="terms.html" target="_blank">Terms of Service</a>
+    </div>
+  </footer>
+
+  <!-- SUBJECT FILES -->
+  <script src="ict.js"></script>
+  <script src="mth.js"></script>
+  <script src="phy.js"></script>
+  <script src="chm.js"></script>
+
+  <!-- MAIN JS -->
+  <script src="script.js"></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7661691847063643"
+     crossorigin="anonymous"></script>
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-format="autorelaxed"
+     data-ad-client="ca-pub-7661691847063643"
+     data-ad-slot="7375553675"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</body>
+</html>
